@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
 const path = require('path');
 
 module.exports = {
@@ -32,11 +34,14 @@ module.exports = {
       title: 'Weather Test App',
       template: 'public/index-template.html',
       inject: 'body',
-    }),
+    })
   ],
   resolve: {
-    root: [path.resolve(__dirname, './src')],
+    roots: [path.resolve(__dirname, './src')],
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    plugins: [
+      new TsconfigPathsPlugin()
+    ]
   },
   optimization: {
     splitChunks: {
