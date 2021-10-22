@@ -1,5 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const WelcomePage = () => <h1> Hello </h1>;
+const WelcomePage = () => (
+  <nav>
+    <Link to="/weather"> Погода </Link>
+  </nav>
+);
 
 export default WelcomePage;

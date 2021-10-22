@@ -6,6 +6,7 @@
       "jsx": "react",
       "allowJs": true,
       "moduleResolution": "node",
+      "baseUrl": "./src",
       "noImplicitAny": true, // Показывать ошибку, если где-то задан тип "any".
       "allowSyntheticDefaultImports": true, // Разрешить импортировать модули не имеющие внутри себя "import default"?
       "watch": true, // Запустить компилятор в режиме отслеживания изменений во входных файлах и их повторной компиляции?
@@ -24,5 +25,5 @@
       // - файлы из папки, указанной в опции компилятора "outDir".
       "src/**/*.spec.ts",
       "node_modules"
-    ]
+    ],
   }

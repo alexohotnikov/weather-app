@@ -15,9 +15,6 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  },
   output: {
     filename: '[name]-[contenthash].js',
     path: path.resolve(__dirname, 'build'),
@@ -37,6 +34,10 @@ module.exports = {
       inject: 'body',
     }),
   ],
+  resolve: {
+    root: [path.resolve(__dirname, './src')],
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
+  },
   optimization: {
     splitChunks: {
       chunks: 'all',

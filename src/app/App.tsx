@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import WeatherPage from '../pages/Weather';
-import WelcomePage from '../pages/Welcome';
+import WeatherPage from 'pages/Weather';
+import WelcomePage from 'pages/Welcome';
 
 const App: React.FC = () => (
   <Router>

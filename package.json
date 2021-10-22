@@ -18,6 +18,7 @@
     "babel-loader": "^8.2.3",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^5.4.0",
@@ -48,7 +49,8 @@
   "lint-staged": {
     "src/**/*": [
       "prettier --write",
-      "eslint --fix"
+      "eslint src/ --fix",
+      "jest --bail --findRelatedTests"
     ]
   }
 }
