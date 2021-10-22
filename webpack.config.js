@@ -22,6 +22,7 @@ module.exports = {
       filename: '[name]-[contenthash].js',
       path: path.resolve(__dirname, 'build'),
     },
+    devtool: 'source-map',
     devServer: {
       hot: true,
       liveReload: true,
@@ -32,7 +33,7 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
         title: 'Weather Test App',
-        template: 'src/public/index-template.html',
+        template: 'public/index-template.html',
         inject: 'body'
       })
     ],
