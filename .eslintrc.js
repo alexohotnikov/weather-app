@@ -21,5 +21,8 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-    }
+        "react/jsx-indent": [1, 4],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+      }
 };
+
