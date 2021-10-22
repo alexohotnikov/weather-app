@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "eslint": "^8.0.1",
-    "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.4.0",
     "husky": "^7.0.4",
     "ts-loader": "^9.2.6",

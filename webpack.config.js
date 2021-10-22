@@ -6,10 +6,6 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.html$/,
-          loader: 'html-loader'
-        },
-        {
           test: /\.tsx?$/,
           use: 'ts-loader',
           exclude: /node_modules/,
@@ -25,8 +21,8 @@ module.exports = {
     },
     plugins: [
       new HtmlWebpackPlugin({
+        title: 'Weather Test App',
         template: 'src/public/index-template.html',
-        title: 'page'
       })
     ]
   };
