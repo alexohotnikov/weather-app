@@ -8,9 +8,15 @@
     "name": "Aleksander Ohotnikov"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@types/react-dom": "^17.0.10",
+    "babel-loader": "^8.2.3",
     "eslint": "^8.0.1",
     "html-webpack-plugin": "^5.4.0",
     "husky": "^7.0.4",
+    "terser-webpack-plugin": "^5.2.4",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.4",
     "webpack": "^5.59.1",
@@ -18,7 +24,11 @@
     "webpack-dev-server": "^4.3.1"
   },
   "scripts": {
-    "build": "webpack build --mode=production",
+    "build": "rm -fr build && webpack build --mode=production",
     "watch": "webpack server --open --hot --mode=development"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

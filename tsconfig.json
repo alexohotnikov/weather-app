@@ -1,11 +1,28 @@
 {
     "compilerOptions": {
       "outDir": "./build/",
-      "noImplicitAny": true,
       "module": "es6",
       "target": "es5",
       "jsx": "react",
       "allowJs": true,
-      "moduleResolution": "node"
-    }
+      "moduleResolution": "node",
+      "noImplicitAny": true, // Показывать ошибку, если где-то задан тип "any".
+      "allowSyntheticDefaultImports": true, // Разрешить импортировать модули не имеющие внутри себя "import default"?
+      "watch": true, // Запустить компилятор в режиме отслеживания изменений во входных файлах и их повторной компиляции?
+      "pretty": true, // Окрашивать в терминале сообщения об ошибках.
+      "sourceMap": true, // Создавать ли соответствующие source map файлы ".map"?
+      "strict": true, // Включить ли все строги проверки типов сразу: noImplicitAny, noImplicitThis, alwaysStrict, strictNullChecks, strictFunctionTypes, strictPropertyInitialization?
+    },
+    "exclude": [
+      // Секция "exclude" позволяет исключить при компиляции определенные файлы, которые находятся в заданных папках секции "include" или в папках всего проекта, если секция "include" не задана.
+      // Компилятор не будет учитывать перечисленные в секции "exclude" файлы TypeScript, которые находятся в папках из секции "include".
+      // Однако файлы, заданные в секции "files" будут обязательно скомпилированы.
+      // Если секция "exclude" не указана, то по умолчанию будут исключаться из компиляции все файлы из папок:
+      // - node_modules,
+      // - bower_components,
+      // - jspm_packages,
+      // - файлы из папки, указанной в опции компилятора "outDir".
+      "src/**/*.spec.ts",
+      "node_modules"
+    ]
   }
