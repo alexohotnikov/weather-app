@@ -11,12 +11,14 @@ jobs:
         node-version: [14.x]
     steps:
     - uses: actions/checkout@v1
-    - name: Use React ${{ matrix.node-version }}
+    - name: Use Node ${{ matrix.node-version }} build
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install Packages
       run: yarn install
+    - name: Tests
+      run: yarn test
     - name: Build page
       run: yarn build
 #     - name: Deploy to gh-pages
